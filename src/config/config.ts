@@ -4,12 +4,12 @@ import { ServiceConfig } from '../constants/types.js';
 export const services: ServiceConfig[] = [
     {
         name: 'Auth_services',
-        healthUrl: 'http://localhost:3005/api/health',
+        healthUrl: 'https://authbackend-production-65fa.up.railway.app/api/health',
         componentId: 'wk5yl37psrk1'
     },
     {
         name: 'Docugenerator',
-        healthUrl: 'http://localhost:3004/api/health', 
+        healthUrl: 'https://documentgenerationbackend-production.up.railway.app/api/health', 
         componentId: 'km7jgf3gdy2p' 
     },
     {
