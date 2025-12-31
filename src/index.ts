@@ -1,6 +1,9 @@
 // index.ts
 import dotenv from 'dotenv';
 import { runHealthChecks } from './helper/monitor.js';
+import express from "express";
+const app = express();
+const PORT = 3000;
 
 dotenv.config();
 
@@ -15,3 +18,7 @@ runHealthChecks();
 setInterval(() => {
     runHealthChecks();
 }, INTERVAL);
+
+app.listen(PORT, ()=>{
+    console.log("Server is listing on port: ", PORT)
+})
